@@ -1,18 +1,18 @@
 #include "shell.h"
 
 /**
- * is_excmd - determines if a file is an executable command.
- * @inf: the info struct.
- * @pth: path to the file.
+ * is_cmd - determines if a file is an executable command
+ * @info: the info struct
+ * @path: path to the file
  *
- * Return: 1 if true, 0 otherwise.
+ * Return: 1 if true, 0 otherwise
  */
-int is_excmd(inf_t *inf, char *pth)
+int is_cmd(info_t *info, char *path)
 {
 	struct stat st;
 
-	(void)inf;
-	if (!pth || stat(pth, &st))
+	(void)info;
+	if (!path || stat(path, &st))
 		return (0);
 
 	if (st.st_mode & S_IFREG)
@@ -23,12 +23,12 @@ int is_excmd(inf_t *inf, char *pth)
 }
 
 /**
- * dup_chars - duplicates characters.
- * @pathstr: the PATH string.
- * @start: starting index.
- * @stop: stopping index.
+ * dup_chars - duplicates characters
+ * @pathstr: the PATH string
+ * @start: starting index
+ * @stop: stopping index
  *
- * Return: pointer to the new buffer.
+ * Return: pointer to new buffer
  */
 char *dup_chars(char *pathstr, int start, int stop)
 {
@@ -43,12 +43,12 @@ char *dup_chars(char *pathstr, int start, int stop)
 }
 
 /**
- * find_path - finds this command in the PATH string.
- * @info: the info struct.
- * @pathstr: the PATH string.
- * @cmd: the command to find.
+ * find_path - finds this cmd in the PATH string
+ * @info: the info struct
+ * @pathstr: the PATH string
+ * @cmd: the cmd to find
  *
- * Return: full path of cmd if found or NULL.
+ * Return: full path of cmd if found or NULL
  */
 char *find_path(info_t *info, char *pathstr, char *cmd)
 {
