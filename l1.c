@@ -168,9 +168,9 @@ int delete_node_at_index(list_t **head, unsigned int index)
 /*%%%%%%%%%%%%%%%% dealing %%%%%%%%%%%%%%%%%*/
 void free_list(list_t **head__p)
 {
-	list_t *node, *next_node, *head;
+	list_t *node, *next_node, *head = NULL;
 
-	if (!head || !*head__p)
+	if (!(head) || !*head__p)
 	{
 		return;
 	}

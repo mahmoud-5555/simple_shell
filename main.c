@@ -9,8 +9,8 @@
  */
 int main(int argc, char **argv)
 {
-	info  info_rmation[] = {0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+	info  info_rmation[] = {{0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}};
 	int filedir = 2;
 
 	asm ("mov %1, %0\n\t"
