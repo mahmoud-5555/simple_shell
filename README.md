@@ -1,2 +1,2 @@
-#SIMPLL SHELL 
-project in c :: 
+#SIMPLL SHELL
+project in c ::
