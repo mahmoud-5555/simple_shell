@@ -1,1 +1,2 @@
-simple shell
+#SIMPLL SHELL
+project in c ::
